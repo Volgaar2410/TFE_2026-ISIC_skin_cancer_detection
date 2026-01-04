@@ -112,7 +112,7 @@ def log_best(study, name, path):
         f.write("\n")
 
 
-N_TRIALS = 1
+N_TRIALS = 500
 
 LOG = "optuna.txt"
 

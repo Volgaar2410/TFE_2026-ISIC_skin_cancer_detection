@@ -37,9 +37,9 @@ CONFIG['T_max'] = df.shape[0] * (CONFIG["n_fold"]-1) * CONFIG['epochs'] // CONFI
 
 CONFIG["stop_epoch"] = 70
 replace_groups = [True, True, True, False]
-TRIPLET_BACKBONE_BYOL = "/workspace/effb0_tripletattention_byol_ema_v2.pth"
-BASELINE_BACKBONE_BYOL = "/workspace/effb0_byol_ema_v2.pth"
-
+TRIPLET_BACKBONE_BYOL = "/workspace/effb0_tripletattention_byol.pth"
+BASELINE_BACKBONE_BYOL = "/workspace/effb0_byol.pth"
+"""
 #efficientnet-B0 baseline no pretraining
 run_experiment_multi_seed(
     df=df,
@@ -102,7 +102,8 @@ run_experiment_multi_seed(
     meta_cols = None,
 )
 
-CONFIG["stop_epoch"] = 20
+"""
+CONFIG["stop_epoch"] = 30
 
 #efficientnet-B0 baseline imagenet1k pretraining
 run_experiment_multi_seed(

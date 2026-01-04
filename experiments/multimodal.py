@@ -39,12 +39,12 @@ CONFIG['T_max'] = df.shape[0] * (CONFIG["n_fold"]-1) * CONFIG['epochs'] // CONFI
 
 
 
-CONFIG["stop_epoch"] = 1
-TRIPLET_BACKBONE = "/workspace/effb0_tripletattention_byol_ema_v2.pth"
+CONFIG["stop_epoch"] = 60
+TRIPLET_BACKBONE = "/workspace/effb0_tripletattention_byol.pth"
 attention_type = "triplet"
 replace_groups = [True, True, True, False]
 
-"efficientnet-B0 tripletattention with concatenation integration"
+#efficientnet-B0 tripletattention with concatenation integration
 run_experiment_multi_seed(
     df=df,
     attention_type=attention_type,
@@ -56,7 +56,7 @@ run_experiment_multi_seed(
     meta_cols=feature_cols,
 )
 
-"efficientnet-B0 tripletattention with hadamard integration"
+#efficientnet-B0 tripletattention with hadamard integration
 run_experiment_multi_seed(
     df=df,
     attention_type=attention_type,
@@ -68,7 +68,7 @@ run_experiment_multi_seed(
     meta_cols=feature_cols,
 )
 
-"efficientnet-B0 tripletattention with CatBoost"
+#efficientnet-B0 tripletattention with CatBoost
 run_experiment_multi_seed(
     df=df,
     attention_type=attention_type,
@@ -80,7 +80,7 @@ run_experiment_multi_seed(
     meta_cols=feature_cols,
 )
 
-"efficientnet-B0 tripletattention with XGB"
+#efficientnet-B0 tripletattention with XGB
 run_experiment_multi_seed(
     df=df,
     attention_type=attention_type,
@@ -92,7 +92,7 @@ run_experiment_multi_seed(
     meta_cols=feature_cols,
 )
 
-"efficientnet-B0 tripletattention with LGB"
+#efficientnet-B0 tripletattention with LGB
 run_experiment_multi_seed(
     df=df,
     attention_type=attention_type,
@@ -103,3 +103,4 @@ run_experiment_multi_seed(
     meta_cnn_integration=None,
     meta_cols=feature_cols,
 )
+

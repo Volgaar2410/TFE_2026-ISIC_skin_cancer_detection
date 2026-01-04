@@ -160,8 +160,10 @@ CONFIG["meta_cols"] = feature_cols
 
 
 CONFIG['T_max'] = df_subset.shape[0] * CONFIG['epochs'] // CONFIG['train_batch_size']
+
 CONFIG["stop_epoch"] = 60
 TRIPLET_BACKBONE = "/workspace/effb0_tripletattention_byol_ema_v2.pth"
+BASELINE_BACKBONE_BYOL = "/workspace/effb0_byol_ema_v2.pth"
 replace_groups = [True, True, True, False]
 attention_type = "triplet"
 
